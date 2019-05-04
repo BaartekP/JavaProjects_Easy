@@ -10,7 +10,7 @@ public class perfectlyBalanced {
 	public void checkBalancy() {
 	
 	//user input
-		System.out.print("Give a string of characters (only x and Y)");
+		System.out.print("\nGive a string of characters (only x and Y)\n");
 		String a = scan.next();
 	
 	//arrays of chars and to count		
@@ -18,7 +18,7 @@ public class perfectlyBalanced {
 		char[] chars = a.toCharArray();
 	
 	//counting
-		for(int i:chars) {
+		for(int i=0;i<chars.length;i++) {
 			if(chars[i]=='x') {count[0]+=1;}
 			else {count[1]+=1;}
 		}
