@@ -6,6 +6,10 @@ public class b_main {
 			
 		System.out.print("Witaj");	
 		
+	//Program 1
+		perfectlyBalanced obj1 = new perfectlyBalanced();
+		
+		obj1.checkBalancy();
 		
 	}
 
