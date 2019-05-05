@@ -14,12 +14,11 @@ public class perfectlBalancedBonus {
 		boolean resoult = true;
 		
 		String a = scan.next();
+		scan.close();
 		char[] chars = a.toCharArray();
 		
 		List<Character> symbols = new ArrayList<>();
-		symbols.add(chars[0]);
-		
-		//System.out.print(symbols.get(0));		
+		symbols.add(chars[0]);	
 		
 		for(int i=0;i<chars.length;i++) {
 			if(symbols.indexOf(chars[i])==-1)
