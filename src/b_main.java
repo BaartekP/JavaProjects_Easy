@@ -15,7 +15,8 @@ public class b_main {
 		//obj2.checkBalance();
 		
 	//Program 2. V2.0 Hex colors
-		
+		HexColors hex1 = new HexColors();
+		hex1.changeToHex();
 	}
 
 }
