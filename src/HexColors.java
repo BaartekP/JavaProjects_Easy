@@ -21,6 +21,8 @@ public class HexColors {
 		a+=calc(g);
 		a+=calc(b);	
 		
+		a='#'+a;
+		
 		System.out.print(a);
 	}
 	
@@ -50,20 +52,21 @@ public class HexColors {
 	}else
 		return String.valueOf(x);
 	
-	
 	return hex;
 	}
 	
 	public String calc(int x) {
 		String a = "";
 		int x_1;
-		
+		int temp = x;
 		do {
 			x_1 = x%16;
 			x = x/16;		
 			a = checkRest(x_1)+a;
 			
 		}while(x!=0);
+		if(temp<16)
+			a = "0"+a;
 		return a;
 	}
 }
