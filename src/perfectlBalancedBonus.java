@@ -10,31 +10,44 @@ public class perfectlBalancedBonus {
 	
 	public void checkBalance() {
 		
-		//user input
+		System.out.print("\n");
+		boolean resoult = true;
+		
 		String a = scan.next();
 		char[] chars = a.toCharArray();
 		
-		
-		List<Integer> count = new ArrayList<>();
 		List<Character> symbols = new ArrayList<>();
-		if(chars.length!=0) symbols.add(chars[0]);	
+		symbols.add(chars[0]);
 		
-		for(int i=1;i<chars.length;i++) {
-			for(int j=0;j<symbols.size();j++) {
-				 if(symbols.indexOf(j)!=chars[i]) {
-					 symbols.add(chars[i]);
-					 System.out.print(chars[i]);
-				 }
-					 
-					 
+		//System.out.print(symbols.get(0));		
+		
+		for(int i=0;i<chars.length;i++) {
+			if(symbols.indexOf(chars[i])==-1)
+				symbols.add(chars[i]);
+		}
+		
+		int[] count = new int[symbols.size()];
+		
+		for(int j=0;j<symbols.size();j++) {
+			for(char x : chars) {
+				if(symbols.get(j)==x)
+					count[j]++;
 			}
 		}
 		
+		int temp = count[0];
+		for(int i=0;i<symbols.size();i++) {
+			if(temp!=count[i]) {
+				resoult=false;
+				break;
+			}
+		}
 		
-		
-		
+		for(int i=0;i<symbols.size();i++) {
+			System.out.print(symbols.get(i)+" : "+count[i]+"\n");
+		}
 			
-		
+		System.out.print(resoult);
 		
 	}
 	
